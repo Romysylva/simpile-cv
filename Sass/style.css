@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css?family=Monsarrat&display=swap");
+.text-xxl {
+  font-size: 4rem;
+  padding: 2rem;
+}
+.text-xl {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.text-lg {
+  font-size: 1.5rem;
+  padding: 0.75rem;
+}
+.text-md {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.text-sm {
+  font-size: 0.6rem;
+  padding: 0.3rem;
+}
+.text-xs {
+  font-size: 0.4rem;
+  padding: 0.2rem;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.UP {
+  text-transform: uppercase;
+}
+
+.tp-0_5 {
+  padding: 0.5rem;
+}
+
+.tp-1 {
+  padding: 1rem;
+}
+
+.tp-1_5 {
+  padding: 1.5rem;
+}
+
+.tp-2 {
+  padding: 2rem;
+}
+
+.tp-2_5 {
+  padding: 2.5rem;
+}
+
+.tp-3 {
+  padding: 3rem;
+}
+
+.tm-0_5 {
+  margin: 0.5rem;
+}
+
+.tm-1 {
+  margin: 1rem;
+}
+
+.tm-1_5 {
+  margin: 1.5rem;
+}
+
+.tm-2 {
+  margin: 2rem;
+}
+
+.tm-2_5 {
+  margin: 2.5rem;
+}
+
+.tm-3 {
+  margin: 3rem;
+}
+
+.tm-3_5 {
+  margin: 3.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  max-width: 1024px;
+  font-family: "Monsarrat", sans-serif;
+  letter-spacing: 1.2px;
+  background-color: #e6e1d8;
+  margin: auto;
+}
+
+hr {
+  margin: 2rem auto;
+}
+
+.icon_default {
+  color: #339af0;
+}
+
+#main-area {
+  grid-area: main;
+}
+
+#section-area_Top, #section-area_bot {
+  grid-area: section_Top;
+}
+
+#section-area_bot {
+  grid-area: section_bot;
+}
+
+#aside-area {
+  grid-area: aside;
+}
+
+#footer-area {
+  grid-area: footer;
+}
+
+.hover:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#main-area {
+  display: grid;
+  grid-template: "aside section_Top " auto "aside section_bot " auto "footer footer" 10vh/30% auto;
+  gap: 10px;
+}
+
+#aside-area {
+  background-color: #faf9f7;
+  width: 100%;
+  box-shadow: 0 0 15px 2px #aaaaaa;
+}
+#aside-area .photo {
+  height: 200px;
+  width: 100%;
+  background-image: url(/assets/images/profile.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#aside-area .photo label {
+  position: relative;
+  top: 70%;
+  left: 12%;
+  font-weight: 500;
+  color: #faf9f7;
+}
+#aside-area .personal_info {
+  margin-top: 1.5rem;
+}
+#aside-area .personal_info li i {
+  padding: 0.5rem 1rem;
+}
+#aside-area .personal_social {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+#aside-area .personal_social li i {
+  padding: 1rem;
+}
+#aside-area .skills .skill {
+  display: flex;
+  flex-direction: column;
+  font-size: bold;
+}
+#aside-area .skills .fab {
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#aside-area .skills .js i {
+  color: #efd81d;
+}
+#aside-area .skills .js input {
+  border: none;
+  border-radius: 5px;
+}
+#aside-area .skills .js input::-moz-placeholder {
+  background-color: #efd81d;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  right: 1%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .skills .js input::placeholder {
+  background-color: #efd81d;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  right: 1%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .skills .react i {
+  color: #00d8ff;
+}
+#aside-area .skills .react input {
+  border: none;
+  border-radius: 5px;
+}
+#aside-area .skills .react input::-moz-placeholder {
+  background-color: #00d8ff;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  right: 30%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .skills .react input::placeholder {
+  background-color: #00d8ff;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  right: 30%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .skills .vuejs i {
+  color: #3fb37f;
+}
+#aside-area .skills .vuejs input {
+  border: none;
+  border-radius: 5px;
+}
+#aside-area .skills .vuejs input::-moz-placeholder {
+  background-color: #3fb37f;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  right: 20%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .skills .vuejs input::placeholder {
+  background-color: #3fb37f;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  right: 20%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .skills .angular i {
+  color: #dd0330;
+}
+#aside-area .skills .angular input {
+  border: none;
+  border-radius: 5px;
+}
+#aside-area .skills .angular input::-moz-placeholder {
+  background-color: #dd0330;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  right: 80%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .skills .angular input::placeholder {
+  background-color: #dd0330;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  right: 80%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .languages .language {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+#aside-area .languages .fas {
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#aside-area .languages .en input::-moz-placeholder {
+  background-color: #22aa44;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  right: 1%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .languages .en input::placeholder {
+  background-color: #22aa44;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  right: 1%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .languages .ger input::-moz-placeholder {
+  background-color: #11a2b2;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  right: 20%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .languages .ger input::placeholder {
+  background-color: #11a2b2;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  right: 20%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .languages .span input::-moz-placeholder {
+  background-color: #ffbb33;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  right: 50%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .languages .span input::placeholder {
+  background-color: #ffbb33;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  right: 50%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .languages .fr input::-moz-placeholder {
+  background-color: #cc3b3b;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  right: 70%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+#aside-area .languages .fr input::placeholder {
+  background-color: #cc3b3b;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  right: 70%;
+  text-align: right;
+  padding-right: 0.2rem;
+}
+
+#section-area_Top, #section-area_bot {
+  width: 100%;
+  height: 100%;
+  background-color: #faf9f7;
+  box-shadow: 0 0 15px 2px #aaaaaa;
+}
+#section-area_Top .work_experience, #section-area_bot .work_experience, #section-area_bot .education {
+  margin: 1rem;
+}
+#section-area_Top .work_experience-title, #section-area_bot .work_experience-title, #section-area_bot .education-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#section-area_Top .work_experience-title i, #section-area_bot .work_experience-title i, #section-area_bot .education-title i {
+  font-size: 2rem;
+}
+#section-area_Top .work_experience-duration, #section-area_bot .work_experience-duration, #section-area_bot .education-duration {
+  display: flex;
+  align-items: center;
+}
+#section-area_Top .work_experience .current, #section-area_bot .work_experience .current, #section-area_bot .education .current {
+  background-color: #339af0;
+  color: #fff;
+  border-radius: 2px;
+}
+
+#footer-area {
+  background-color: #339af0;
+  color: #faf9f7;
+}
+
+.switch_mode {
+  display: flex;
+  justify-content: space-evenly;
+}
+.switch_mode .Btn {
+  display: inline-block;
+  border: 3px;
+  font-weight: bold;
+}
+.switch_mode .Btn.light {
+  background-color: #e6e1d8;
+  color: #333;
+  box-shadow: 0 0 5px 1px #e6e1d8;
+}
+.switch_mode .Btn.dark {
+  background-color: #0a000e;
+  color: #fff;
+  box-shadow: 0 0 5px 1px #0a000e;
+}
+
+.light:target {
+  background-color: #faf9f7;
+  transition: background-color 0.8s;
+}
+.light:target .icon_default {
+  color: #54b689;
+}
+.light:target #aside-area {
+  background-color: #1e2a3a;
+  color: #e6e1d8;
+}
+.light:target #section-area_Top,
+.light:target #section-area_bot {
+  background-color: #111821;
+  color: #e6e1d8;
+}
+.light:target #footer-area {
+  background-color: #54b689;
+}
+/*# sourceMappingURL=style.css.map */

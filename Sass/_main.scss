@@ -1,0 +1,5 @@
+#main-area {
+    display: grid;
+    @include GridTemplate;
+    gap: 10px;
+}

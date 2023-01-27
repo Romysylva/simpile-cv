@@ -1,0 +1,43 @@
+#section-area_Top {
+    width: 100%;
+    height: 100%;
+    background-color: $light-c;
+    @include boxshadow(60);
+
+    .work_experience {
+        margin: 1rem;
+        &-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            i {
+                font-size: 2rem;
+
+            }
+        }
+        &-duration {
+            display: flex;
+            align-items: center;
+        }
+        .current {
+            $color: $icons;
+            background-color: $color;
+            color: set-text-c($color, 60 );
+            border-radius: 2px;
+        
+        }
+    }
+}
+#section-area_bot {
+    @extend #section-area_Top;
+    .education {
+    @extend .work_experience;
+        &-title {
+            @extend .work_experience-title;
+        }
+        &-duration {
+            @extend .work_experience-duration;
+        }
+
+    }
+}

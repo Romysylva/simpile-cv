@@ -1,0 +1,66 @@
+#footer-area {
+    background-color: $icons;
+    color: $light-c;
+}
+
+.switch_mode {
+    display: flex;
+    justify-content: space-evenly;
+
+    .Btn {
+        display: inline-block;
+        border: 3px;
+        font-weight: bold;
+        &.light {
+            $color: darken($light-c, 10%);
+            background-color: $color;
+            color: set-text-c($color,) ;
+            box-shadow: 0 0 5px 1px $color;
+        }
+        &.dark {
+            $color: $dark-c;
+            background-color: $color;
+            color: set-text-c($color,) ;
+            box-shadow: 0 0 5px 1px $color;
+        }
+    }
+}
+.light:target {
+    background-color: $light-c;
+    transition: background-color .8s;
+
+
+    .icon_default {
+        color: $icons_switch-c;
+    }
+    #aside-area {
+        background-color: $bg-switch-c_aside;
+        color: darken($light-c, 10%);
+    }
+
+    #section-area_Top,
+    #section-area_bot {
+        background-color: $bg-switch-c_section;
+        color: darken($light-c, 10%) ;
+    }
+    #footer-area {
+        background-color: $icons_switch-c;
+
+    }
+    // NAVIGATION 
+
+    #Simple_Nav {
+        background-color: $icons_switch-c;
+
+    }
+    #Simple_Nav-left {
+        .nav_link{
+
+            background-color: $icons_switch-c;
+        }
+        
+    }
+}
+
+
+

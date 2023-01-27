@@ -1,0 +1,85 @@
+// main grid area mixins
+
+ 
+    
+$Grid-Area_Map: (
+    'main-area': main,
+    'section-area_Top': section_Top,
+    'section-area_bot': section_bot,
+    'aside-area': aside,
+    'footer-area': footer,
+);
+
+// GRID AREA Ids
+
+@each  $area_name, $area_value in $Grid-Area_Map {
+    ##{$area_name} {
+        grid-area: $area_value;
+    } 
+
+}
+
+@mixin GridTemplate {
+    grid-template: 
+    'aside section_Top ' auto
+    'aside section_bot ' auto
+    'footer footer' 10vh /
+    30% auto;
+    
+
+}
+
+// SHADOW MIXINS 
+
+@mixin boxshadow($amount: 10%) {
+    box-shadow:  0 0 15px 2px lighten(#111, $amount);
+}
+
+@mixin opacity($opac: 0.5) {
+    opacity: $opac;
+}
+.hover:hover {
+    cursor: pointer;
+    @include opacity;
+}
+
+            // FUNCTION SET TEXT COLOR BEST ON BG COLOR
+
+            @function set-text-c($bc-c, $amount: 49) {
+                @if(lightness($bc-c) >  $amount) {
+                    @return #333;
+                } @else {
+                    @return #fff;
+                }
+
+            }
+            @function set-text-c-2($bc-c) {
+                @if(lightness($bc-c) < 49) {
+                    @return #fff;
+                } @else {
+                    @return #333;
+                }
+
+            }
+
+@mixin placeholder ($bg-c, $amoount) {
+    &::placeholder {
+
+        background-color: $bg-c;
+        font-weight: bold;
+        color: set-text-c($bg-c) ;
+        position: relative;
+        right: $amoount;
+        text-align: right;
+        padding-right: .2rem;
+    }
+}
+@mixin placeholder-1 ($bg-c, $amoount) {
+    background-color: $bg-c;
+    font-weight: bold;
+    color: set-text-c($bg-c) ;
+    position: relative;
+    right: $amoount;
+    text-align: right;
+    padding-right: .2rem;
+}

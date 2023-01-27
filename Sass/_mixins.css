@@ -1,0 +1,24 @@
+#main-area {
+  grid-area: main;
+}
+
+#section-area_Top {
+  grid-area: section_Top;
+}
+
+#section-area_bot {
+  grid-area: section_bot;
+}
+
+#aside-area {
+  grid-area: aside;
+}
+
+#footer-area {
+  grid-area: footer;
+}
+
+.hover:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}

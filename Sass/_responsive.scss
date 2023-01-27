@@ -1,0 +1,72 @@
+// RESPONSIVE 
+
+@media (min-width: 1400px) {
+    #Simple_Nav {
+        visibility: hidden;
+    }
+    #Simple_Nav-left {
+        visibility: visible;
+
+        .nav_links .nav_link {
+            background-color: $icons;
+            text-align: center;
+            padding: .5rem 1rem;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    #Simple_Nav {
+        visibility: visible;
+    }
+    #Simple_Nav-left {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: $ipad-pro) {
+    #Simple_Nav {
+        visibility: hidden;
+    }
+}
+
+
+@media (max-width: $ipad) {
+    #Simple_Nav {
+        visibility: visible;
+        z-index: 2;
+        justify-content: space-around;
+    }
+    #main-area {
+        display: flex;
+        flex-direction: column;
+        #aside-area {
+            padding-bottom: 1rem;
+            .photo {
+                height: 400px;
+            }
+            .personal_social {
+                font-size: 2rem;
+
+            }
+        }
+    }
+}
+@media (max-width: $phone) {
+    // NAVIGATION BAR 
+
+    #Simple_Nav {
+        justify-content: space-between;
+        font-size: 1rem;
+        background-color: $icons;
+        li{
+            padding: .4rem;
+
+        }
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -1,0 +1,164 @@
+#aside-area {
+    background-color: $light-c;
+    width: 100%;
+
+    @include boxshadow(60);
+
+    .photo {
+        height: 200px;
+        width: 100%;
+        background-image: url(/assets/images/marcle.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        label {
+            position: relative;
+            top: 70%;
+            left: 15%;
+            font-weight: 500;
+            color: $light-c;
+        }
+    }
+
+    .personal_info {
+        margin-top: 1.5rem;
+        li {
+            i {
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+    .personal_social {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-evenly ;
+
+        li {
+            i {
+                padding: 1rem;
+            }
+        }
+    }
+    .skills {
+        .skill {
+            display: flex;
+            flex-direction: column;
+            font-size: bold;
+        }
+        .fab {
+            padding-right: 1rem ;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .js{
+            $color: $js;
+
+            i {
+                color: $color;
+            }
+
+            input {
+                border: none;
+                border-radius: 5px;
+
+                &::placeholder {
+                    @include placeholder-1($color, 1%);
+                }
+                
+            }
+        }
+
+        .react{
+            $color: $reaact;
+
+            i {
+                color: $color;
+            }
+
+            input {
+                border: none;
+                border-radius: 5px;
+
+                &::placeholder {
+                    @include placeholder-1($color, 30%);
+                }
+                
+            }
+        }
+        .vuejs{
+            $color: $vuejs;
+
+            i {
+                color: $color;
+            }
+
+            input {
+                border: none;
+                border-radius: 5px;
+
+                &::placeholder {
+                    @include placeholder-1($color, 20%);
+                }
+                
+            }
+        }
+        .angular{
+            $color: $angular;
+
+            i {
+                color: $color;
+            }
+
+            input {
+                border: none;
+                border-radius: 5px;
+
+                &::placeholder {
+                    @include placeholder-1($color, 80%);
+                }
+                
+            }
+        }
+    }
+    .languages {
+        .language {
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+
+        }
+        .fas {
+            padding-right: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+        }
+        .en {
+            $color: $success-c;
+            input {
+                @include placeholder($color, 1%);
+               
+            }
+        }
+        .ger {
+            $color: $info-c;
+            input {
+                @include placeholder($color, 20%);
+            }
+        }
+
+        .span {
+            $color: $warning-c;
+            input {
+                @include placeholder($color, 50%);
+            }
+        }
+        .fr {
+            $color: $danger-c;
+            input {
+                @include placeholder($color, 70%);
+            }
+        }
+    }
+}
+
